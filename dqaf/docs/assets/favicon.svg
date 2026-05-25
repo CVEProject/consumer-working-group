@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Steam -->
+  <path d="M11 8 C10 6 12 4 11 2" stroke="#bbb" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M16 8 C15 6 17 4 16 2" stroke="#bbb" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M21 8 C20 6 22 4 21 2" stroke="#bbb" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Saucer -->
+  <ellipse cx="15.5" cy="27.5" rx="11" ry="2.5" fill="#5D3A1A"/>
+  <!-- Cup body -->
+  <path d="M7 11 L9.5 25 L21.5 25 L24 11 Z" fill="#8B4513"/>
+  <!-- Cup rim -->
+  <ellipse cx="15.5" cy="11" rx="8.5" ry="2" fill="#A0522D"/>
+  <!-- Coffee surface -->
+  <ellipse cx="15.5" cy="12.5" rx="6.5" ry="1.5" fill="#2C1A0E"/>
+  <!-- Handle -->
+  <path d="M22.5 14.5 Q28.5 14.5 28.5 19 Q28.5 24 22.5 24" fill="none" stroke="#5D3A1A" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
