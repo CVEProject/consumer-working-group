@@ -1,0 +1,8 @@
+title: CVE Consumer Working Group DQAF
+description: CVE Data Quality Assessment Framework — review documents for working group members
+baseurl: /consumer-working-group
+url: https://cveproject.github.io
+repository: CVEProject/consumer-working-group
+markdown: kramdown
+kramdown:
+  input: GFM

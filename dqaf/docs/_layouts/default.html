@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/dqaf.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <div class="site-header">
+      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+      <nav>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/content/process' | relative_url }}">Process</a>
+        <a href="{{ '/content/roles' | relative_url }}">Role Inventory</a>
+        <a href="{{ '/content/canonical-tasks' | relative_url }}">Canonical Tasks</a>
+        <a href="{{ '/content/task-purposes' | relative_url }}">Task Purposes</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <div class="site-footer">
+      <a href="https://github.com/CVEProject/consumer-working-group">CVEProject/consumer-working-group</a>
+    </div>
+  </footer>
+</body>
+</html>

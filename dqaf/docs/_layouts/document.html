@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<div class="document-content" data-document="{{ page.document_file }}">
+  {% if page.status == "draft" %}<div class="doc-status">draft — open for review</div>{% endif %}
+  {{ content }}
+</div>
+<script>window.paragraphIssues = {{ site.data['paragraph-issues'] | jsonify }};</script>
+<script src="{{ '/assets/dqaf.js' | relative_url }}"></script>

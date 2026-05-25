@@ -1,0 +1,62 @@
+name: Link issue to paragraph
+
+on:
+  issues:
+    types: [opened, closed, reopened, deleted]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  link-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse issue title
+        id: parse
+        run: |
+          TITLE="${{ github.event.issue.title }}"
+          if [[ "$TITLE" =~ ^Feedback:\ (.+)\ ¶(.+)$ ]]; then
+            echo "doc=${BASH_REMATCH[1]}" >> $GITHUB_OUTPUT
+            echo "para=${BASH_REMATCH[2]}" >> $GITHUB_OUTPUT
+            echo "matched=true" >> $GITHUB_OUTPUT
+          else
+            echo "matched=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Auto-label by document
+        if: steps.parse.outputs.matched == 'true' && github.event.action == 'opened'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          case "${{ steps.parse.outputs.doc }}" in
+            "process.md")         LABEL="doc:process" ;;
+            "roles.md")           LABEL="doc:roles" ;;
+            "canonical-tasks.md") LABEL="doc:canonical-tasks" ;;
+            "task-purposes.md")   LABEL="doc:task-purposes" ;;
+            *) LABEL="" ;;
+          esac
+          if [ -n "$LABEL" ]; then
+            gh issue edit ${{ github.event.issue.number }} --add-label "$LABEL" --repo ${{ github.repository }}
+          fi
+
+      - name: Update paragraph issues data
+        if: steps.parse.outputs.matched == 'true'
+        run: |
+          python3 dqaf/scripts/update-issues.py \
+            "${{ steps.parse.outputs.doc }}" \
+            "${{ steps.parse.outputs.para }}" \
+            "${{ github.event.issue.number }}" \
+            "${{ github.event.action }}"
+
+      - name: Commit and push
+        if: steps.parse.outputs.matched == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dqaf/docs/_data/
+          git diff --cached --quiet && exit 0
+          git commit -m "link issue #${{ github.event.issue.number }} to ${{ steps.parse.outputs.doc }} ¶${{ steps.parse.outputs.para }}"
+          git push
