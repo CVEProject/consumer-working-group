@@ -4,10 +4,9 @@
   var REPO = 'CVEProject/consumer-working-group';
 
   var LABEL_MAP = {
-    'process.md':        'doc:process',
-    'roles.md':          'doc:roles',
-    'canonical-tasks.md':'doc:canonical-tasks',
-    'task-purposes.md':  'doc:task-purposes'
+    'process.md': 'doc:process',
+    'roles.md':   'doc:roles',
+    'tasks.md':   'doc:tasks'
   };
 
   function slugify(text) {

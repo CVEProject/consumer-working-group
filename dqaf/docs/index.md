@@ -16,9 +16,8 @@ The documents on this site are working drafts open for review by working group m
 | Document | Description | Status |
 |---|---|---|
 | [Development Process](content/process) | Six-step methodology and validation gates | Draft — Gate 1 review |
-| [Role Inventory](content/roles) | 41 practitioner roles across six groups | Draft — Gate 1 review |
-| [Canonical Tasks](content/canonical-tasks) | 45 tasks across 19 phases, with role mappings | Draft — Gate 1 review |
-| [Task Purposes](content/task-purposes) | Mechanism-free purpose statements for all 45 tasks | Draft — Gate 1 review |
+| [Role Inventory](content/roles) | 7 sectors, 19 roles, 59 task families with supporting references | Draft — Gate 1 review |
+| [Task List](content/tasks) | 47 tasks across 12 functional groups | Draft — Gate 1 review |
 
 ---
 
