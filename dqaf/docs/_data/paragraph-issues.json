@@ -1,1 +1,10 @@
-{}
+{
+  "tasks.md": {
+    "t002-given-a-product-or-software-version-which-cves-apply-to-it-p02": {
+      "open": [
+        24
+      ],
+      "closed": []
+    }
+  }
+}
