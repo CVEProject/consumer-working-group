@@ -29,6 +29,8 @@ One or more CWG Chair positions are appointed by the CVE Board and is responsibl
 * Coordinating deliverables and reporting to the CVE Board.  
 * Ensuring working group operations align with the CVE Program’s governance practices.
 
+A Chair serves until they resign, are removed under applicable CVE Program policies, or a successor is appointed. Every two years, the CWG will review the Chair’s continued service through its Tacit Acceptance process. If no objection is raised during the designated review period, the Chair will continue serving for another two years. If an objection is raised, the CWG will to resolve it through discussion and/or develop a voting criteria/process. The Chair may continue serving in an interim capacity while a successor is selected.
+
 #### **Members**
 
 Members of the CWG:
@@ -59,8 +61,8 @@ New members receive access to CWG documentation, communications platforms, and a
 Members may be removed by the Chair with notice to the CVE Board if:
 
 * They request removal.  
-* They are inactive for an extended period.  
-  They violate the CVE Program’s Code of Conduct.
+* They are inactive for an extended period (as determined by chairs).  
+* They violate the CVE Program’s Code of Conduct.
 
 ---
 
@@ -131,6 +133,5 @@ All members must adhere to the [CVE Program’s Professional Code of Conduct](ht
 This charter will be reviewed:
 
 * As needed, based on major scope or structure changes.  
-* With at least **two weeks' notice** prior to a scheduled vote.  
-* Amendments require a voice vote during a regular CWG meeting.
+* Amendments require a Tacit Acceptance on the mailing list (where silence means acceptance) with at least **two weeks' notice**.
 
